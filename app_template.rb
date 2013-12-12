@@ -1,5 +1,3 @@
-ruby '2.0.0'
-
 gem 'thin'
 gem 'slim'
 gem 'exception_notification'
