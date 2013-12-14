@@ -30,10 +30,10 @@ gem_group :production do
 end
 
 remove_file "public/index.html"
-remove_file "app/view/layouts/application.html.erb"
-get "#{repo}/app/view/layouts/application.html.slim", "app/view/layouts/application.html.slim"
+remove_file "app/views/layouts/application.html.erb"
+get "#{repo}/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
 
-file 'Procfile.rb', <<-CODE
+file 'Procfile', <<-CODE
   web: bundle exec thin start -p $PORT -e $RACK_ENV
 CODE
 
